@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Collocations Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .section {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            min-height: 80px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #thankYouMessage, #responsesContainer {
+            display: none;
+            background-color: #e8f4fc;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .response {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        .response h3 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div id="surveyForm">
+        <h1>English Collocations Survey</h1>
+        
+        <div class="section">
+            <h2>1. Understanding Collocations</h2>
+            <p>Collocations are word combinations that frequently appear together naturally (e.g., "make a mistake", "heavy rain"). Native speakers use them automatically, but learners often find them challenging.</p>
+        </div>
+        
+        <form id="collocationSurvey">
+            <div class="section">
+                <h2>2. Familiarity with Collocations</h2>
+                <div class="question">
+                    <input type="radio" id="familiar1" name="familiarity" value="Very familiar">
+                    <label for="familiar1">Very familiar (I know many collocations)</label><br>
+                    
+                    <input type="radio" id="familiar2" name="familiarity" value="Somewhat familiar">
+                    <label for="familiar2">Somewhat familiar (I know some)</label><br>
+                    
+                    <input type="radio" id="familiar3" name="familiarity" value="Not very familiar">
+                    <label for="familiar3">Not very familiar</label><br>
+                    
+                    <input type="radio" id="familiar4" name="familiarity" value="Never heard">
+                    <label for="familiar4">Never heard of them before</label>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>3. Frequency of Encountering Collocations</h2>
+                <div class="question">
+                    <p>How often do you notice collocations when:</p>
+                    <p>Reading English: 
+                        <select id="readingFrequency">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                            <option value="Always">Always</option>
+                        </select>
+                    </p>
+                    
+                    <p>Listening to English: 
+                        <select id="listeningFrequency">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                            <option value="Always">Always</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>4. Learning Methods</h2>
+                <p>What helps you learn collocations best? (Select all that apply)</p>
+                <div class="question">
+                    <input type="checkbox" id="method1" name="methods" value="Repeated exposure">
+                    <label for="method1">Repeated exposure</label><br>
+                    
+                    <input type="checkbox" id="method2" name="methods" value="Using in sentences">
+                    <label for="method2">Using them in sentences</label><br>
+                    
+                    <input type="checkbox" id="method3" name="methods" value="Context learning">
+                    <label for="method3">Seeing them in context (books/movies)</label><br>
+                    
+                    <input type="checkbox" id="method4" name="methods" value="Mobile apps">
+                    <label for="method4">Mobile apps</label><br>
+                    
+                    <input type="checkbox" id="method5" name="methods" value="Flashcards">
+                    <label for="method5">Flashcards</label><br>
+                    
+                    <input type="checkbox" id="method6" name="methods" value="Other">
+                    <label for="method6">Other:</label>
+                    <input type="text" id="methodOther" placeholder="Please specify">
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>5. Learning Challenges</h2>
+                <p>What difficulties do you face? (Select all that apply)</p>
+                <div class="question">
+                    <input type="checkbox" id="challenge1" name="challenges" value="Not recognizing">
+                    <label for="challenge1">Not recognizing them</label><br>
+                    
+                    <input type="checkbox" id="challenge2" name="challenges" value="Hard to remember">
+                    <label for="challenge2">Hard to remember</label><br>
+                    
+                    <input type="checkbox" id="challenge3" name="challenges" value="Literal translation">
+                    <label for="challenge3">Translating literally from my language</label><br>
+                    
+                    <input type="checkbox" id="challenge4" name="challenges" value="Few practice chances">
+                    <label for="challenge4">Few chances to practice</label><br>
+                    
+                    <input type="checkbox" id="challenge5" name="challenges" value="Don't know combinations">
+                    <label for="challenge5">Don't know which words go together</label>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>6. Usage Confidence</h2>
+                <div class="question">
+                    <p>How confident are you using collocations in:</p>
+                    <p>Speaking: 
+                        <select id="speakingConfidence">
+                            <option value="1">1 (Not confident)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Very confident)</option>
+                        </select>
+                    </p>
+                    
+                    <p>Writing: 
+                        <select id="writingConfidence">
+                            <option value="1">1 (Not confident)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Very confident)</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>7. Example Sharing</h2>
+                <div class="question">
+                    <p>Please share one collocation you've learned recently and how you remember it:</p>
+                    <textarea id="collocationExample" placeholder="Example: 'Make a decision' - I remember it because it's different from my language where we say 'take a decision'"></textarea>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>8. Additional Comments</h2>
+                <div class="question">
+                    <p>Any other thoughts about learning collocations?</p>
+                    <textarea id="additionalComments"></textarea>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button type="submit">Submit Survey</button>
+                <button type="button" id="viewResponses">View Previous Responses</button>
+            </div>
+        </form>
+    </div>
+    
+    <div id="thankYouMessage">
+        <h2>Thank You for Your Participation!</h2>
+        <p>Your responses have been recorded. You can view other responses below.</p>
+        <button id="backToSurvey">Back to Survey</button>
+    </div>
+    
+    <div id="responsesContainer">
+        <h2>Previous Responses</h2>
+        <div id="responsesList"></div>
+        <button id="backToSurveyFromResponses">Back to Survey</button>
+    </div>
+
+    <script>
+        // Store responses in localStorage
+        const storageKey = 'collocationSurveyResponses';
+        
+        // Get form elements
+        const surveyForm = document.getElementById('collocationSurvey');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+        const responsesContainer = document.getElementById('responsesContainer');
+        const responsesList = document.getElementById('responsesList');
+        const viewResponsesBtn = document.getElementById('viewResponses');
+        const backToSurveyBtn = document.getElementById('backToSurvey');
+        const backToSurveyFromResponsesBtn = document.getElementById('backToSurveyFromResponses');
+        
+        // Form submission handler
+        surveyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Gather form data
+            const formData = {
+                familiarity: document.querySelector('input[name="familiarity"]:checked')?.value || 'Not answered',
+                readingFrequency: document.getElementById('readingFrequency').value,
+                listeningFrequency: document.getElementById('listeningFrequency').value,
+                methods: Array.from(document.querySelectorAll('input[name="methods"]:checked')).map(el => el.value),
+                otherMethod: document.getElementById('methodOther').value,
+                challenges: Array.from(document.querySelectorAll('input[name="challenges"]:checked')).map(el => el.value),
+                speakingConfidence: document.getElementById('speakingConfidence').value,
+                writingConfidence: document.getElementById('writingConfidence').value,
+                collocationExample: document.getElementById('collocationExample').value,
+                additionalComments: document.getElementById('additionalComments').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            // Save to localStorage
+            const existingResponses = JSON.parse(localStorage.getItem(storageKey)) || [];
+            existingResponses.push(formData);
+            localStorage.setItem(storageKey, JSON.stringify(existingResponses));
+            
+            // Show thank you message
+            surveyForm.style.display = 'none';
+            thankYouMessage.style.display = 'block';
+            displayResponses();
+        });
+        
+        // View responses handler
+        viewResponsesBtn.addEventListener('click', function() {
+            surveyForm.style.display = 'none';
+            responsesContainer.style.display = 'block';
+            displayResponses();
+        });
+        
+        // Back to survey handlers
+        backToSurveyBtn.addEventListener('click', function() {
+            thankYouMessage.style.display = 'none';
+            surveyForm.style.display = 'block';
+        });
+        
+        backToSurveyFromResponsesBtn.addEventListener('click', function() {
+            responsesContainer.style.display = 'none';
+            surveyForm.style.display = 'block';
+        });
+        
+        // Display stored responses
+        function displayResponses() {
+            const responses = JSON.parse(localStorage.getItem(storageKey)) || [];
+            responsesList.innerHTML = '';
+            
+            if (responses.length === 0) {
+                responsesList.innerHTML = '<p>No responses yet. Be the first to submit!</p>';
+                return;
+            }
+            
+            responses.forEach((response, index) => {
+                const responseDiv = document.createElement('div');
+                responseDiv.className = 'response';
+                responseDiv.innerHTML = `
+                    <h3>Response #${index + 1} (${response.timestamp})</h3>
+                    <p><strong>Familiarity:</strong> ${response.familiarity}</p>
+                    <p><strong>Frequency when reading:</strong> ${response.readingFrequency}</p>
+                    <p><strong>Frequency when listening:</strong> ${response.listeningFrequency}</p>
+                    <p><strong>Learning methods:</strong> ${response.methods.join(', ')} ${response.otherMethod ? ' (' + response.otherMethod + ')' : ''}</p>
+                    <p><strong>Challenges:</strong> ${response.challenges.join(', ')}</p>
+                    <p><strong>Speaking confidence:</strong> ${response.speakingConfidence}/5</p>
+                    <p><strong>Writing confidence:</strong> ${response.writingConfidence}/5</p>
+                    <p><strong>Example collocation:</strong> ${response.collocationExample || 'Not provided'}</p>
+                    <p><strong>Additional comments:</strong> ${response.additionalComments || 'None'}</p>
+                `;
+                responsesList.appendChild(responseDiv);
+            });
+        }
+    </script>
+</body>
+</html>
